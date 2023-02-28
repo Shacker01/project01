@@ -23,6 +23,7 @@ class Clients(models.Model):
         return f"{self.username}"
 
 
+
 class Plants(models.Model):
     LOCATIONS = (('Budalangi','Budalangi'),('Bulemia','Bulemia'),('Port_victoria','PortVictoria'),('Busia','Busia'),('Mubbwayo', 'Mubwayo'),('Rongo', 'Rongo'),('Mundika', 'Mundika'),('Igigo','Igigo'),('Sirimba','Sirimba'),)
     username = models.CharField(max_length=15)
