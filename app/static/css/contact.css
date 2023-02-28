@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+body, html{
+    padding: 0%;
+    margin: 0%;
+    background-color: green;
+}
+nav{
+    padding: 0%;
+    margin: auto;
+    background-color: white;
+    color: black;
+    width: 50%;
+    height: auto;
+    font-size: 30px;
+    border-radius: 25px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    font-size: larger;
+    color:chartreuse;
+}
+a{
+    text-decoration: none;
+    color: purple;
+}
+
+.contact{
+    box-sizing: unset;
+}

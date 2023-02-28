@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:orange;
+}
+fieldset{
+    width: 80%;
+    height: auto;
+    margin: 0% auto;
+    background-image:
+    url("home.jpg");
+}
+h1 {
+    text-align: center;
+    margin: 0% auto;
+    color: white;
+    font-size: 60px;
+}
+h2 {
+    color: white;
+    text-align: center;
+}
+h4 {
+    color: white;
+    text-align: center;
+}
+#nav-bar, li {
+    text-decoration: none;
+    list-style-type:none;
+    margin: 0% auto;
+    text-align: center;
+    display: block;
+    margin: 20px;
+}
+#nav-bar,ul {
+    margin-top: 100px;
+}
+
+#j{
+    font-size: 30px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding: 5px;
+    width: 30px;
+    text-decoration: none;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+#social {
+    text-align: center;
+    margin: 0% auto;
+    font-size: 25px;
+    padding: 30px;
+}
+#whatsapp {
+    color: white;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: green;
+}
+#facebook {
+    color: rgb(47, 47, 190);
+    padding: 7px;
+    border-radius: 15px;
+    background-color: white;
+}
+#twitter {
+    color: white;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: rgb(95, 95, 224);
+}
+#instagram{
+    color: white;
+    padding: 5px;
+    border-radius: 15px;
+    background-image: linear-gradient(rgb(72, 72, 202),rgb(207, 17, 207),rgb(126, 121, 121));
+}
+#phone {
+    color: white;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: rgb(11, 214, 11);
+}
+.image{
+    text-align: center;
+}
+img{
+    border-radius: 40%;
+}

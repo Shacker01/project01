@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/dpartment.css' %}">
+    <title>app_rice</title>
+</head>
+<body>
+    <div class="heading">
+        <div class="heading1">
+            <h2><a href="{% url 'cultivation' %}">Plants Management</a></h2>
+        </div>
+        <div class="heading2">
+            <h2><a href="{% url 'treatment' %}">Treatment Management</a></h2>
+        </div>
+        <div class="heading3">
+            <h2><a href="{% url 'medicine' %}">Medicine Management</a></h2>
+        </div>
+        <div class="heading4">
+            <h2><a href="{% url 'farmers' %}">Farmers Management</a></h2>
+        </div>
+    </div>
+    <div class="body">
+        <div class="plant">
+            <div class="column">
+                
+                <h3>
+                    Adoption of best crop management practices improves crop productivity and can contribute to greater yields with improved quality.
+                    <br><br><b>Seedbed Preparation</b><br>
+                    Seedbed Preparation is the first step to improve crop growth and development. The ideal Seedbed is uniformly firm, has adequate soil moisture near the surface, and is free from competing weeds.
+                    "Good seed-to-soil contact required" is a phrase commonly seen on seeding documentation. seed germination is improved if seeds have good contact with soil. However, too firm a Seedbed makes it challenging to get the seed into the ground.<br>
+                    The two primary methods of Seedbed Preparation are conventional tillage and reduced or no-tillage. The traditional conventional tillage involves turning over the entire plow depth and exposing large quantities of soil organic matter to oxidation.
+                    However, reduced or non-tillage practices can lead to accumulation of soil carbon, which can ultimately benefit soil health and improve crop yields in the long run.<br><br>
+                    <b>Planting</b><br>
+                </h3>
+            </div>
+        </div>
+        <div class="treatment">
+            <div class="colum">
+                
+                <h3>Changes in climate and global economy and new regulations and evolving consumer needs bring new challenges to farmers and formulators today.
+                    Alongside traditional solutions for weed desication and growth control, new alternatives are emerging, giving customers the flexibility
+                    and confidence to tailor their formulations to their conditions and needs. A prominent example is glufosinate herbicides, which deliver quick
+                    and efficient control of many weeds and undesirable plants.
+                    For help or to get Treatment for your plants click <a href="{% url 'treatment' %}">here</a>
+                </h3>
+                <img src="{% static 'images/treatment.jpg' %}">
+            </div>
+        </div>
+        <div class="medicine">
+            <div class="colm">
+                
+                <h3>
+                    
+                </h3>
+                <img src="{% static 'images/medicin.jpeg' %}">
+            </div>
+        </div>
+        <div class="farmer">
+            <div class="colfar">
+                
+                <h3>
+                    
+                    Are You a Rice farmer? Create an Account <a href="{% url 'farmers' %}">here</a>
+                </h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

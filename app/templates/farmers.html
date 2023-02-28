@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>app_rice</title>
+</head>
+<body>
+    <h1><b>Rice Farmers Management Platform</b></h1>
+    <div class="button">
+        <a href="{% url 'home' %}">Back Home</a><br><br><br><br>
+    </div>
+    
+    <form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>Submit</button>
+    </form>
+</body>
+</html>

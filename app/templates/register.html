@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <title>app_rice</title>
+</head>
+<body>
+
+
+    <form action="" method="POST">
+            {% csrf_token %}
+            <h1>Register from here</h1>
+            First name:<br>
+        <input type="text" name="first_name" placeholder="FirstName" required><br><br>
+            Last name:<br>
+        <input type="text" name="last_name" placeholder="LastName" required><br><br>
+            Username:<br>
+        <input type="text" name="username" placeholder="Username" required><br><br>
+            Email:<br>
+        <input type="email" name="email" placeholder="Email" required><br><br>
+            Password:<br>
+        <input type="password" name="password1" placeholder="Password" required><br><br>
+        Confirm password:<br>
+        <input type="password" name="password2" placeholder="Conf_Password" required><br><br>
+        <button type="submit">Submit</button><br><br>
+        Already a member? <a href="{% url 'login' %}">LogIn</a>
+        {% for message in messages %}
+        <div class="message">
+        {{message}}
+        </div>
+        {% endfor %}
+    </form>
+
+</body>
+</html>

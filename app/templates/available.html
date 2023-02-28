@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/available.css' %}">
+    <title>products_on_sale</title>
+</head>
+<body>
+<div class="header">
+    <h1>Welcome to our Store!! <b>Make a choice of your favourite.</b></h1>
+</div>
+<div class="back">
+    <a href="{% url 'home' %}">Back Home</a>
+</div>
+    <fieldset> 
+        <p><strong>Items On Sell</strong></p>
+        <div class="loop">
+            {% for products in product reversed %}
+            <div class="image_card">
+                <div class="card">
+                    <img src="{{ products.Product_Image.url }}">&nbsp;&nbsp;&nbsp;
+                    Product_name: {{ products.Product_name }}&nbsp;&nbsp;&nbsp;<br>
+                    Location: {{ products.location  }}&nbsp;&nbsp;&nbsp;<br>
+                    Username: {{ products.Username }}&nbsp;&nbsp;&nbsp;<br>
+                    Phone_no: {{ products.phone_no }}<br>
+                    <br>
+                    <a href="tel:{{products.phone_no}}" >Contact Seller:</a>
+                    <br>        
+                </div>
+            </div>
+            {% endfor %}
+           
+        </div>
+    </fieldset>  
+    <footer>
+        <h2> Have a Product to Sale? Upload it<a href="{% url 'product' %}"> Here.</a></h2>
+    </footer>
+</body>
+</html>

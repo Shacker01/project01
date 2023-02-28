@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/plants.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+        <button>Submit</button>
+        </form>
+    </div>
+    <fieldset> 
+        <p><strong>Plants' Growth</strong></p>
+        <div class="loop">
+            {% for plants in plant reversed %}
+            <div class="image_card">
+                <div class="card">
+                    <img src="{{ plants.farm_image.url }}">&nbsp;&nbsp;&nbsp;<br>
+                    Farm_no: {{ plants.farm_no }}&nbsp;&nbsp;&nbsp;<br>
+                    Location: {{ plants.location  }}&nbsp;&nbsp;&nbsp;<br>
+                    Username: {{ plants.username }}&nbsp;&nbsp;&nbsp;<br>
+                    <br>        
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </fieldset>  
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+
+}
+body, html{
+    background-color: green;
+    padding: 0%;
+    margin: 0%;
+}
+form{
+    margin-top: 5%;
+    text-align: center;
+    background-color: chartreuse;
+    width: 50%;
+    height: 50%;
+    padding: 5%;
+    border-radius: 20px;
+    margin-left: 25%;
+}
+.message{
+    background-color: rgba(212, 7, 7, 0.623);
+    width: fit-content;
+    color: white;
+    margin-left: 30%;
+}

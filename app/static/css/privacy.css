@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+body, html {
+    background-color: grey;
+}
+.body {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5%;
+}
+header {
+    position:fixed;
+    margin-top:  0%;
+    text-align: center;
+    margin-left: 30%;
+    font-size: 50px;
+    background-color: rgba(18, 206, 18, 0.747);
+    width: 40%;
+    height: 60px;
+    border-radius: 15px;
+}
+fieldset {
+    border-radius: 30px;
+}

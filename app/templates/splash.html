@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/splash.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Register</title>
+</head>
+<body>
+    <fieldset>
+    <strong><h1>Welcome to our Rice Farming site</h1></strong>
+    <h2>If you don't have an account!! Register below.... <br> Already have an account!! Login.....</h2>
+    <br>
+    <div class="image">
+        <img src="{% static 'images/down.jpg'  %}">
+    </div>
+    <br>
+    <div id="social">
+        <h4>Our social media platforms</h4>
+        <i class="fa fa-map-marker"></i>
+        <a href="" id="whatsapp" ><i class="fa fa-whatsapp"></i></a>
+        <a href="" id="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="" id="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="" id="instagram"><i class="fa fa-instagram"></i></a>
+        <a href="tel:0798085167" id="phone"><i class="fa fa-phone"></i></a>
+    </div>
+    <div class="nav-bar">
+        <ul>
+            <li>
+                <a href="{% url 'register' %}" id="j">Register</a>
+                &nbsp;&nbsp;
+                <a href="{% url 'login' %}" id="j" >Login</a>
+            </li>
+        </ul>
+    </div>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/hom.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>app_rice</title>
+</head>
+<body>
+    <div class="f-content">
+        <div class="del_account">
+        {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}">Log Out</a>&nbsp;&nbsp;|
+            <a href="{% url 'del_user' user.id %}">Delete Account</a>
+            {% endif %}
+        </div>
+    </div>
+    <!-- <fieldset> -->
+    <div class="heading">
+        <div class="container">
+            <strong style="margin-right: 9%;">RICE FARMING MANAGEMENT SYSTEM</strong>
+        </div>
+    </div>
+
+        <header id="header">
+            <header id="content">
+                <div class="dropdown">
+                    <!-- <h3>Dashboard</h3> -->
+                    <button class="dropbtn">Dashboard</button>
+                    <div class="dropdown-content">
+                        <a href="{% url 'farm' %}">Farm</a>
+                        <a href="{% url 'plant' %}">Plants</a>
+                        <a href="{% url 'treatment' %}">Treatments</a>
+                        <a href="{% url 'medicine' %}">Medicines</a>
+                        <a href="{% url 'farmers' %}">Farmers</a>
+                        <a href="{% url 'available' %}">Items On Sale</a>
+                        <a href="{% url 'aboutUs' %}">About Us</a>
+                        <a href="{% url 'contactUs' %}">Contact Us</a>
+                        <a href="{% url 'faqs' %}">FAQs</a>
+                        <a href="{% url 'privacy' %}">Privacy Policy</a>
+                        <a href="{% url 'updateDrugs' %}">Terms & Conditions</a>
+                    </div>
+                </div>
+            </header>
+        </header>
+       
+                <div class="image">
+                    <img src="{% static 'images/world.jpg' %}">
+                </div>
+                <h1>Welcome to our Site!! Farm/Shop with Us...</h1>
+            </div>
+        </div>  
+    
+        <div id="social">
+            <h4>Our social media platforms</h4>
+            <i class="fa fa-map-marker"></i>
+            <a href="https://www.whatsapp.com/0798085167" id="whatsapp" ><i class="fa fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/steve.ojiambo.790" id="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/Shacker01_steve/photo" id="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/steve.ojiambo.790/" id="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="tel:0798085167" id="phone"><i class="fa fa-phone"></i></a>
+            <a href="https://github.com/Shacker01" id="github"><i class="fa fa-github"></i></a>
+        </div>
+        <div class="footer">   
+             <strong>&copy;Copyright @Shacker01_steve 2022 &nbsp;

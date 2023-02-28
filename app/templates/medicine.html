@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/medicine.css' %}">
+    <title>medicine_records</title>
+</head>
+<body>
+    <section class="row">
+        <div class="class1">
+            <div class="card">
+                <div class="card-body">
+                <p class="text-center lead">Update Medicine Information</p><hr>
+                    <form action="" method='POST' enctype='multipart/form-data'>
+                        {% csrf_token %}
+                        {{form.as_p}}
+                        <button class="button">Submit</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>

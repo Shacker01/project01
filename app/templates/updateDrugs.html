@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>medication records</h1>
+    <div class="loop">
+        {% for medicine in Medicines reversed %}
+        <div class="image_card">
+            <div class="card">
+                <img src="{{ medicine.image.url }}">&nbsp;&nbsp;&nbsp;
+                Drug used: {{ medicine.name_of_medicine_used }}&nbsp;&nbsp;&nbsp;<br>
+                Type of Drug: {{ medicine.types  }}&nbsp;&nbsp;&nbsp;<br>
+                Quantity: {{ medicine.quantity }}&nbsp;&nbsp;&nbsp;<br>
+                Date: {{ medicine.treatmentDate }}<br>
+                <br>        
+            </div>
+        </div>
+        {% endfor %}
+       <!-- <h4>update your medications <a href="{% url 'medicine' %}">here</a></h4> -->
+    </div>
+</body>
+</html>

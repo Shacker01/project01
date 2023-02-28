@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/faqs.css' %}">
+    <title>app_rice</title>
+</head>
+<body>
+    <header>The Frequently Asked Questions (FAQs)</header>
+    <div class="faqs">
+        <a href="{% url 'question' %}">
+            1. What is SRI?<br>
+            2. What are the main environmental, economic, and social benefits of applying the SRI methodology?<br>
+            3. Where did SRI originate?<br>
+            4. How has the SRI methodology spread around the world?<br>
+            5. How does SRI benefit poor households?<br>
+            6. How can SRI also benefit larger farmers?<br>
+            7. Can SRI outperform "best management practices"?<br>
+            8. Does SRI require specific plant varieties?<br>
+            9. Does SRI have anything to do with genetically-modified organisms (GMOs)?<br>
+            10. Is SRI an "organic" system of production?<br>
+            11. What are the reasons for farmers to change their current rice-growing practices?
+        </a>
+    </div>
+</body>
+</html>
