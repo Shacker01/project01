@@ -21,6 +21,22 @@
                     </form>
                     
                 </div>
+                <fieldset>
+                    <p>Uploaded Medications</p>
+                    <div class="loop">
+                        {% for medicines in medicine %}
+                        <div class="image_card">
+                            <div class="card">
+                                <img src="{{ medicines.image.url }}" >&nbsp;&nbsp;<br>
+                                Drug Used:{{ medicines.drug_used }}&nbsp;&nbsp;<br>
+                                Type :{{ medicines.type }}&nbsp;&nbsp;<br>
+                                Quantity (ml) :{{ medicines.quantity }}&nbsp;&nbsp;<br>
+                                Date of Treatment :{{ medicines.treatmentDate }}&nbsp;&nbsp;<br>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </fieldset>
             </div>
         </div>
     </section>

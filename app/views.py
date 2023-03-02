@@ -169,7 +169,7 @@ def Product(request):
     form = ProductsForm()
     return render(request, 'product.html', {'form':form})
 
-def Medicines(request):
+def Medicine(request):
     form = MedicinesForm()
     if request.method == 'POST':
         form = MedicinesForm(request.POST, request.FILES)
@@ -179,10 +179,10 @@ def Medicines(request):
             return redirect('medicine')
         else:
             form = MedicinesForm()
-    # form = MedicinesForm()
-    # return render(request, 'medicine.html', {'form':form})    
-    context = {'form':form,}
-    return render(request, 'updateDrugs.html', context)
+    form = MedicinesForm()
+    context = {'form':form}
+    context['medicine'] = Medicines.objects.all()  
+    return render(request, 'medicine.html', context)
     
 def UpdateDrugs(request):
     context = {}

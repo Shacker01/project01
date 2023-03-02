@@ -20,4 +20,4 @@ class ProductsTable(admin.ModelAdmin):
     
 @admin.register(Medicines)
 class MedicinesTable(admin.ModelAdmin):
-    list_display = ['name_of_medicine_used', 'types', 'quantity', 'treatmentDate']
+    list_display = ['drug_used', 'type', 'quantity', 'treatmentDate']

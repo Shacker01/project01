@@ -2,8 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
-from phonenumber_field.modelfields import PhonenumberField
-import phonenumbers
+
 
 
 
@@ -74,8 +73,8 @@ class Products(models.Model):
 
 
 class Medicines(models.Model):
-    name_of_medicine_used = models.CharField(max_length=10)
-    types = models.CharField(max_length=10)
+    drug_used = models.CharField(max_length=15)
+    type = models.CharField(max_length=10)
     quantity = models.IntegerField()
     treatmentDate = models.DateField(auto_now_add=True, null=True)
     image = models.ImageField(null=True, blank=True)
@@ -87,17 +86,5 @@ class Medicines(models.Model):
         return f"{self.name_of_medicine_used}"
 
 
-class CountryPhoneNumberField(PhoneNumberField):
-    def __init__(self, *args, **kwargs):
-        self.country_code = kwargs.pop('country_code', None)
-        super().__init__(*args, **kwargs)
 
-    def to_python(self, value):
-        phone_number = super().to_python(value)
-        if phone_number and not phone_number.country_code:
-            phone_number.country_code = self.country_code
-        return phone_number
-
-class MyModel(models.Model):
-    phone_number = CountryPhoneNumberField(country_code='254')
 
