@@ -2,11 +2,11 @@
     box-sizing: border-box;
 }
 .header {
-    background-color: rgba(0, 255, 34, 0.753);
     position: fixed;
-    margin-left: 20%;
-    width: 80%;
-    border-radius: 5%;
+    border-bottom: 2px solid;
+    margin-left: 15%;
+    width: fit-content;
+    border-radius: 35px;
 }
 p {
     margin-top: 0px;
@@ -62,9 +62,10 @@ fieldset{
     border-radius: 50px;
 }
 fieldset > p {
+    text-align: center;
+    margin-top: 10%;
     font-size: 35px;
     background-color: aliceblue;
-    width: fit-content;
     border-radius: 35px;
 }
 footer {

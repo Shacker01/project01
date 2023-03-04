@@ -24,7 +24,7 @@ class Clients(models.Model):
 
 
 class Plants(models.Model):
-    LOCATIONS = (('Budalangi','Budalangi'),('Bulemia','Bulemia'),('Port_victoria','PortVictoria'),('Busia','Busia'),('Mubbwayo', 'Mubwayo'),('Rongo', 'Rongo'),('Mundika', 'Mundika'),('Igigo','Igigo'),('Sirimba','Sirimba'),)
+    LOCATIONS = (('Budalangi','Budalangi'),('Bulemia','Bulemia'),('Port_victoria','PortVictoria'),('Busia','Busia'),('Mubwayo', 'Mubwayo'),('Rongo', 'Rongo'),('Mundika', 'Mundika'),('Igigo','Igigo'),('Sirimba','Sirimba'),)
     username = models.CharField(max_length=15)
     farm_no = models.PositiveIntegerField()
     location = models.CharField(max_length=20, choices=LOCATIONS, default='Budalangi')

@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+.text-center-lead{
+    font-size: 30px;
+    border-radius: 10px;
+    width: 40%;
+    margin-left: 30%;
+    border-bottom: 2px solid;
+}
 
 fieldset {
     background-color: aliceblue;
@@ -42,6 +49,21 @@ div{
     background-color: darkgray;
     text-align: center;
 }
-.form{
+form{
     text-align: left;
+    font-size: 20px;
+    background-color: grey;
+    width: 35%;
+    padding: 5%;
+    margin: 0 auto;
+    border-radius: 20px;
+    border-bottom: 3px solid;
+}
+button{
+    border-radius: 15px;
+    margin-left: 35%;
+}
+ a{
+    margin-left: 0;
+    text-decoration: none;
 }

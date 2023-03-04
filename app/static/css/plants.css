@@ -29,11 +29,13 @@ fieldset{
     width: 25%;
     height: auto;
     border-radius: 50px;
+    margin: 2px;
 }
 fieldset > p {
+    text-align: center;
     font-size: 35px;
     background-color: aliceblue;
-    width: fit-content;
+    /* width: fit-content; */
     border-radius: 35px;
 }
 
