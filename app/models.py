@@ -26,7 +26,7 @@ class Clients(models.Model):
 class Plants(models.Model):
     LOCATIONS = (('Budalangi','Budalangi'),('Bulemia','Bulemia'),('Port_victoria','PortVictoria'),('Busia','Busia'),('Mubwayo', 'Mubwayo'),('Rongo', 'Rongo'),('Mundika', 'Mundika'),('Igigo','Igigo'),('Sirimba','Sirimba'),)
     username = models.CharField(max_length=15)
-    farm_no = models.PositiveIntegerField()
+    farm_no = models.PositiveIntegerField(default=1)
     location = models.CharField(max_length=20, choices=LOCATIONS, default='Budalangi')
     farm_image = models.ImageField(upload_to= 'media/')
     class Meta:
@@ -73,9 +73,9 @@ class Products(models.Model):
 
 
 class Medicines(models.Model):
-    drug_used = models.CharField(max_length=15)
-    type = models.CharField(max_length=10)
-    quantity = models.IntegerField()
+    drug_used = models.CharField(max_length=15, default= 'Pentagon')
+    type = models.CharField(max_length=10, default="Insecticide")
+    quantity = models.CharField(max_length = 15, default= str("1 ") +' ml' )
     treatmentDate = models.DateField(auto_now_add=True, null=True)
     image = models.ImageField(null=True, blank=True)
     
@@ -83,7 +83,7 @@ class Medicines(models.Model):
         verbose_name_plural = 'Medicines'
         
     def __str__(self):
-        return f"{self.name_of_medicine_used}"
+        return f"{self.drug_used}"
 
 
 
