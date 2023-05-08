@@ -1,3 +1,3 @@
 # project01
-farming management system.
+rice farming management system.
 
